@@ -57,7 +57,16 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="App_Readme\LABjs_README.md" />
+    <None Include="Scripts\jquery-1.11.0.intellisense.js" />
+    <Content Include="Scripts\jquery-1.11.0.js" />
+    <Content Include="Scripts\jquery-1.11.0.min.js" />
+    <Content Include="Scripts\LAB-debug.min.js" />
+    <Content Include="Scripts\LAB.js" />
+    <Content Include="Scripts\LAB.min.js" />
     <Content Include="Web.config" />
+    <Content Include="Scripts\jquery-1.11.0.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />

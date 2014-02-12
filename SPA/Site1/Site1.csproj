@@ -57,7 +57,36 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="config\config.ts" />
+    <Content Include="config\config.js">
+      <DependentUpon>config.ts</DependentUpon>
+    </Content>
+    <Content Include="config\config.min.js">
+      <DependentUpon>config.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="config\references.ts" />
+    <Content Include="config\main.js" />
+    <Content Include="config\references.js">
+      <DependentUpon>references.ts</DependentUpon>
+    </Content>
+    <Content Include="config\references.min.js">
+      <DependentUpon>references.ts</DependentUpon>
+    </Content>
+    <Content Include="content\css\shopcart.css" />
+    <Content Include="content\css\stil.css" />
+    <Content Include="Index.html" />
+    <Content Include="packages.config" />
+    <Content Include="App_Readme\LABjs_README.md" />
+    <None Include="scripts\jquery-1.11.0.intellisense.js" />
+    <Content Include="scripts\jquery-1.11.0.js" />
+    <Content Include="scripts\jquery-1.11.0.min.js" />
+    <Content Include="scripts\LAB-debug.min.js" />
+    <Content Include="scripts\LAB.js" />
+    <Content Include="scripts\LAB.min.js" />
+    <TypeScriptCompile Include="scripts\Typings\lab.d.ts" />
+    <Content Include="scripts\Typings\jquery.d.ts" />
     <Content Include="Web.config" />
+    <Content Include="scripts\jquery-1.11.0.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,6 +99,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
