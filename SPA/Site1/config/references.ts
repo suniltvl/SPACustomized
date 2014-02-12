@@ -12,6 +12,7 @@ class References implements IReferences {
     static loadJsReferences(): void {
         var cdn: string = Config.getCDNPath();
         var requireJsPath = cdn + "scripts/libs/require/require.js";
+        var mainJsPath = cdn + "src/main.js";
         var jsFilesExtension = Config.getJsFileExtension();
         //+Loading files Started
         $LAB
@@ -24,7 +25,7 @@ class References implements IReferences {
             .script(cdn + "scripts/libs/math.uuid.js")
             .script(cdn + "scripts/libs/signals/signals.min.js")
             .wait(function () {
-                $("head").append("<script type=\"text/javascript\" data-main=\"" + cdn + "src/main.js\" id=\"requirejs\" src=\"" + requireJsPath + "\"></script>");
+                $("head").append("<script type=\"text/javascript\" data-main=\"" + mainJsPath +"\" id=\"requirejs\" src=\"" + requireJsPath + "\"></script>");
             });
 
     }
