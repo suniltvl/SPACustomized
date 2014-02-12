@@ -65,7 +65,6 @@
       <DependentUpon>config.ts</DependentUpon>
     </Content>
     <TypeScriptCompile Include="config\references.ts" />
-    <Content Include="config\main.js" />
     <Content Include="config\references.js">
       <DependentUpon>references.ts</DependentUpon>
     </Content>

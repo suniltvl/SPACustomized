@@ -24,7 +24,7 @@ class References implements IReferences {
             .script(cdn + "scripts/libs/math.uuid.js")
             .script(cdn + "scripts/libs/signals/signals.min.js")
             .wait(function () {
-                $("head").append("<script type=\"text/javascript\" data-main=\"/config/main.js\" id=\"requirejs\" src=\"" + requireJsPath + "\"></script>");
+                $("head").append("<script type=\"text/javascript\" data-main=\"" + cdn + "src/main.js\" id=\"requirejs\" src=\"" + requireJsPath + "\"></script>");
             });
 
     }
