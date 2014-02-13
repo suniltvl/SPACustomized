@@ -5,7 +5,7 @@ define(function (require) {
     //dependencies
     var Boiler = require("Boiler"), // BoilerplateJS namespace used to access core classes, see above for the definition
         settings = require("./settings"), //global settings file of the product suite
-        moduleContexts = require("./module/modules"),
+        commonModuleContexts = require("./modules/modules"),
         errorHandler = "./handlers/errorHandler"; //file where all of your product modules will be listed
 
     //return an object with the public interface for an 'application' object. Read about module pattern for details.
@@ -22,8 +22,10 @@ define(function (require) {
                     appContext.setLanguage(settings.uiLang);
                 }
             }
+            debugger;
             appContext.addSettings(settings);
-            //appContext.loadChildContexts(moduleContexts);
+
+            appContext.loadChildContexts(commonModuleContexts);
         }
     };
 });

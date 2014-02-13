@@ -1,7 +1,7 @@
 /// <reference path="../scripts/Typings/require.d.ts" />
 define(function (require) {
     //dependencies
-    var Boiler = require("Boiler"), settings = require("./settings"), moduleContexts = require("./modules/modules"), errorHandler = "./handlers/errorHandler";
+    var Boiler = require("Boiler"), settings = require("./settings"), moduleContexts = require("./module/modules"), errorHandler = "./handlers/errorHandler";
 
     //return an object with the public interface for an 'application' object. Read about module pattern for details.
     return {
@@ -17,7 +17,7 @@ define(function (require) {
                 }
             }
             appContext.addSettings(settings);
-            appContext.loadChildContexts(moduleContexts);
+            //appContext.loadChildContexts(moduleContexts);
         }
     };
 });

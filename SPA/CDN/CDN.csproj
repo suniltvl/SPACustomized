@@ -429,6 +429,7 @@
     <Content Include="scripts\libs\underscore\underscore-1.3.3.js" />
     <TypeScriptCompile Include="scripts\Typings\Config.d.ts" />
     <Content Include="scripts\Typings\jquery.d.ts" />
+    <Content Include="scripts\Typings\kendo.web.d.ts" />
     <Content Include="scripts\Typings\require.d.ts" />
     <TypeScriptCompile Include="src\main.ts" />
     <TypeScriptCompile Include="src\application.ts" />
@@ -438,6 +439,53 @@
     <Content Include="src\application.min.js">
       <DependentUpon>application.ts</DependentUpon>
     </Content>
+    <TypeScriptCompile Include="src\modules\common\login\component.ts" />
+    <Content Include="src\modules\common\login\component.js">
+      <DependentUpon>component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\modules\common\login\component.min.js">
+      <DependentUpon>component.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="src\modules\common\login\nls\resources.ts" />
+    <Content Include="src\modules\common\login\nls\resources.js">
+      <DependentUpon>resources.ts</DependentUpon>
+    </Content>
+    <Content Include="src\modules\common\login\nls\resources.min.js">
+      <DependentUpon>resources.ts</DependentUpon>
+    </Content>
+    <Content Include="src\modules\common\login\view.html" />
+    <TypeScriptCompile Include="src\modules\common\login\viewmodel.ts" />
+    <Content Include="src\modules\common\login\viewmodel.js">
+      <DependentUpon>viewmodel.ts</DependentUpon>
+    </Content>
+    <Content Include="src\modules\common\login\viewmodel.min.js">
+      <DependentUpon>viewmodel.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\context.js" />
+    <Content Include="src\core\dom-controller.js" />
+    <Content Include="src\core\helpers\localizer.js" />
+    <Content Include="src\core\helpers\logger.js" />
+    <Content Include="src\core\helpers\mediator.js" />
+    <Content Include="src\core\helpers\router.js" />
+    <Content Include="src\core\helpers\settings.js" />
+    <Content Include="src\core\helpers\styler.js" />
+    <Content Include="src\core\helpers\_helpers_.js" />
+    <TypeScriptCompile Include="src\init_application.ts" />
+    <TypeScriptCompile Include="src\handlers\errorHandler.ts" />
+    <Content Include="src\handlers\ajaxError.htm" />
+    <Content Include="src\handlers\errorHandler.js">
+      <DependentUpon>errorHandler.ts</DependentUpon>
+    </Content>
+    <Content Include="src\handlers\errorHandler.min.js">
+      <DependentUpon>errorHandler.ts</DependentUpon>
+    </Content>
+    <Content Include="src\handlers\scriptError.htm" />
+    <Content Include="src\init_application.js">
+      <DependentUpon>init_application.ts</DependentUpon>
+    </Content>
+    <Content Include="src\init_application.min.js">
+      <DependentUpon>init_application.ts</DependentUpon>
+    </Content>
     <Content Include="src\main.js">
       <DependentUpon>main.ts</DependentUpon>
     </Content>
@@ -445,12 +493,29 @@
       <DependentUpon>main.ts</DependentUpon>
     </Content>
     <TypeScriptCompile Include="src\settings.ts" />
+    <TypeScriptCompile Include="src\modules\modules.ts" />
+    <TypeScriptCompile Include="src\modules\common\module.ts" />
+    <Content Include="src\modules\common\module.js">
+      <DependentUpon>module.ts</DependentUpon>
+    </Content>
+    <Content Include="src\modules\common\module.min.js">
+      <DependentUpon>module.ts</DependentUpon>
+    </Content>
+    <Content Include="src\modules\modules.js">
+      <DependentUpon>modules.ts</DependentUpon>
+    </Content>
+    <Content Include="src\modules\modules.min.js">
+      <DependentUpon>modules.ts</DependentUpon>
+    </Content>
     <Content Include="src\settings.js">
       <DependentUpon>settings.ts</DependentUpon>
     </Content>
     <Content Include="src\settings.min.js">
       <DependentUpon>settings.ts</DependentUpon>
     </Content>
+    <Content Include="src\core\url-controller.js" />
+    <Content Include="src\core\view-template.js" />
+    <Content Include="src\core\_boiler_.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
