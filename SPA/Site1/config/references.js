@@ -12,7 +12,10 @@ var References = (function () {
 
         //+Loading files Started
         $LAB.script(cdn + "scripts/libs/underscore/underscore-1.3.3.js").script(cdn + "scripts/libs/signals/signals.min.js").script(cdn + "scripts/libs/crossroads/crossroads.min.js").script(cdn + "scripts/libs/hasher/hasher.min.js").script(cdn + "scripts/libs/pubsub/pubsub-20120708.js").script(cdn + "scripts/libs/backbone/backbone-min-0.9.2.js").script(cdn + "scripts/libs/math.uuid.js").script(cdn + "scripts/libs/signals/signals.min.js").wait(function () {
+            document.title = Config.getApplicationTitle();
             $("head").append("<script type=\"text/javascript\" data-main=\"" + mainJsPath + "\" id=\"requirejs\" src=\"" + requireJsPath + "\"></script>");
+
+            $LAB.script(cdn + "scripts/libs/kendo/" + Config.getKendoVersion() + "/kendo.web.min.js");
         });
     };
 

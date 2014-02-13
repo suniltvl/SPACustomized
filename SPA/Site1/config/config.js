@@ -16,9 +16,19 @@ var Config = (function () {
     Config.getCssFileExtension = function () {
         return this.cssFileExtension;
     };
-    Config.kendoVersion = "2013.1.319";
+
+    Config.getApplicationTitle = function () {
+        return this.applicationTitle;
+    };
+
+    Config.getAppType = function () {
+        return this.applicationJsType;
+    };
+    Config.kendoVersion = "2013.2.716";
     Config.cdnPath = "http://localhost:93/";
     Config.jsFileExtension = ".js";
     Config.cssFileExtension = ".css";
+    Config.applicationTitle = "Shop Site 1";
+    Config.applicationJsType = "init";
     return Config;
 })();
