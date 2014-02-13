@@ -16,7 +16,7 @@ define(function (require) {
                     appContext.setLanguage(settings.uiLang);
                 }
             }
-            debugger;
+            
             appContext.addSettings(settings);
 
             appContext.loadChildContexts(commonModuleContexts);

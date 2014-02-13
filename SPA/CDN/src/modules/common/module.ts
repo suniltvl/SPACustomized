@@ -8,7 +8,7 @@ define(
 
         var Module = function (globalContext) {
             var context = new Boiler.Context(globalContext);
-            debugger;
+            
             //scoped DomController that will be effective only on $('#page-content')
             var controller = new Boiler.DomController($('#siteWrapper'));
             //add routes with DOM node selector queries and relevant components

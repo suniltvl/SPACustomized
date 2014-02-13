@@ -124,7 +124,7 @@ define(['./helpers/_helpers_'], function (Helpers) {
 	@param {ObjectArray} children
 	**/
 	Context.prototype.loadChildContexts = function (children) {
-	    debugger;
+	    
 		for (var i = 0; i < children.length; i++) {
 			var ChildContextClass = children[i];
 			new ChildContextClass(this); //initializes the module
