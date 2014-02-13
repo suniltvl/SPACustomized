@@ -99,7 +99,7 @@
     <TypeScriptCompileOnBuild>false</TypeScriptCompileOnBuild>
     <TypeScriptGenerateJsFile>true</TypeScriptGenerateJsFile>
     <TypeScriptKeepComments>false</TypeScriptKeepComments>
-    <TypeScriptMargin_width>771</TypeScriptMargin_width>
+    <TypeScriptMargin_width>396</TypeScriptMargin_width>
     <TypeScriptMinify>true</TypeScriptMinify>
     <TypeScriptProduceSourceMap>false</TypeScriptProduceSourceMap>
     <TypeScriptResaveWithUtf8BOM>false</TypeScriptResaveWithUtf8BOM>
