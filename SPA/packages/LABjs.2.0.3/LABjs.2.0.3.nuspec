@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>LABjs</id>
+    <version>2.0.3</version>
+    <title>LABjs :: Loading And Blocking JavaScript</title>
+    <authors>Kyle Simpson (aka "getify") getify@gmail.com</authors>
+    <owners>Kyle Simpson (aka "getify") getify@gmail.com</owners>
+    <licenseUrl>http://www.opensource.org/licenses/mit-license.php</licenseUrl>
+    <projectUrl>http://getify.github.com/LABjs</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>The defining characteristic of LABjs is the ability to load all JavaScript files in parallel, as fast as the browser will allow, but giving you the option to ensure proper execution order if you have dependencies between files.
+
+with regular &lt;script&gt; tags, you cannot control their loading and executing behavior reliably cross-browser. Some new browsers will load them in parallel but execute them serially, delaying execution of a smaller (quicker loading) script in the pessimistic assumption of dependency on previous scripts. Older browsers will load and execute them one-at-a-time, completely losing any parallel loading speed optimizations and slowing the whole process drastically.
+
+All browsers will, however, block other page resources (like stylesheets, images, etc) while these scripts are loading, which causes the rest of the page's content loading to appear much more sluggish to the user.
+
+LABjs by contrast will load ALL the scripts in parallel, and will execute them as soon as possible, unless you express an execution order dependency in the chain by inserting .wait(). In addition, you can "couple" inline script logic to execute in the proper order in your chain as desired by passing a function to .wait(...).
+
+It's important to realize that explicitly, separate $LAB chains operate completely independently, meaning there will be no explicit waiting for execution order between them.
+
+NOTE: JavaScript execution is always still a single-threaded, first-come-first-served environment. Also, some browsers use internal loading queues which create implicit "blocking" on script execution between separate chains. Also, the 'AllowDuplicates:false' config option will de-duplicate across chains, meaning chain B can be made to implicitly "wait" on chain A if chain B references a same script URL as chain A, and that script is still downloading.</description>
+    <summary>LABjs is a dynamic script loader intended to replace the use of the ugly, non-performant &lt;script&gt; tag with a flexible and performance-optimized alternative API.</summary>
+    <releaseNotes>New in v2.0
+
+AllowDuplicates now actually works across chains. This is very important for those who want to use multiple/nested $LAB chains as part of a shared-dependency loading mechanism.
+
+Chains are now fully resumable, meaning you can save the return value from the last call to a chained function, and then use that saved value later as the starting point to resume the chain from where it left off.
+
+Queueing is now built-in, with queueScript, queueWait and runQueue -- this important for those who want to build up the chain across multiple files or inline &lt;script&gt; elements (like in the CMS case), but want to defer starting the loading of the code starting until later (usually at the bottom of the page).
+
+LABjs now supports noConflict (for rolling back to a previous version/copy of $LAB on the page) and sandbox (for creating a new pristine sandboxed copy of the current $LAB)
+
+LABjs now relies on feature-testing for async=false and implicit/explicit "true preloading" (currently only IE, but in the spec process). Ugly/hacky "cache preloading" is now only used for "older webkit" (before March 2011 nightlies, etc), and even then, only for remote files.
+
+For XHR preloading (only used in "older webkit" for local files, by default), to support better debugability, "// @sourceURL=..." is appended to the end of the code, to map the XHR/injected code to a real file name. Currently, browsers only support this for eval() (not script injection, like LABjs uses). It is hoped that browsers will soon support this annotation for their developer-tools.
+
+Speaking of debugging, LABjs now supports a DEBUG mode (only if you use the source file, or if you use the LABjs-debug.min.js production file) and enable the "Debug" config option, which captures all the inner workings (and any errors in .wait() calls) to the browser's console.log, if present.
+
+LABjs now supports a "CacheBust" config option, which will attempt to make sure all loaded scripts are forcibly loaded new on each page refresh, by auto-appending a random number parameter to each URL. *This is really only practical/advised for DEV environments, where you want to ensure that the code reloads every time. Doing so in production would be really bad for user performance.**
+
+As part of LABjs' rewrite, the code style is now significantly improved in readability (most "minification" hacks have been removed), and it's also using more memory-savvy code, such as far fewer closures. As a result, LABjs should run leaner and faster, if only by a little bit. The goal is to get LABjs out of the way so your scripts load and run as fast as possible.
+
+"AppendTo", "UsePreloading", and "UseCachePreloading" options were removed as they are no longer useful. This is the only backwards-incompatible change (no actual API changes, just config), and the change should just cause older usage code to continue to operate as normal while ignoring the no longer supported options. Still, test your code carefully if you've been using either of those 3 config options before.</releaseNotes>
+    <copyright>(c) Kyle Simpson</copyright>
+    <tags>JavaScript Loader Parallel</tags>
+  </metadata>
+</package>
