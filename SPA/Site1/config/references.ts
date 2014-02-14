@@ -24,12 +24,11 @@ class References implements IReferences {
             .script(cdn + "scripts/libs/backbone/backbone-min-0.9.2.js")
             .script(cdn + "scripts/libs/math.uuid.js")
             .script(cdn + "scripts/libs/signals/signals.min.js")
+            .script(cdn + "scripts/libs/kendo/" + Config.getKendoVersion() + "/kendo.web.min.js")
             .wait(function () {
                 document.title = Config.getApplicationTitle();
                 $("head").append("<script type=\"text/javascript\" data-main=\"" + mainJsPath + "\" id=\"requirejs\" src=\"" + requireJsPath + "\"></script>");
 
-                $LAB
-                    .script(cdn + "scripts/libs/kendo/" + Config.getKendoVersion() + "/kendo.web.min.js")
 
             });
 
