@@ -57,6 +57,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="scripts\App\helper.ts" />
+    <Content Include="scripts\App\helper.js">
+      <DependentUpon>helper.ts</DependentUpon>
+    </Content>
+    <Content Include="scripts\App\helper.min.js">
+      <DependentUpon>helper.ts</DependentUpon>
+    </Content>
     <Content Include="scripts\libs\backbone\backbone-min-0.9.2.js" />
     <Content Include="scripts\libs\crossroads\crossroads.min.js" />
     <Content Include="scripts\libs\hasher\hasher.min.js" />
@@ -440,6 +447,28 @@
       <DependentUpon>application.ts</DependentUpon>
     </Content>
     <TypeScriptCompile Include="src\modules\common\login\component.ts" />
+    <TypeScriptCompile Include="src\modules\common\default\component.ts" />
+    <Content Include="src\modules\common\default\component.js">
+      <DependentUpon>component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\modules\common\default\component.min.js">
+      <DependentUpon>component.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="src\modules\common\default\viewmodel.ts" />
+    <TypeScriptCompile Include="src\modules\common\default\nls\resources.ts" />
+    <Content Include="src\modules\common\default\nls\resources.js">
+      <DependentUpon>resources.ts</DependentUpon>
+    </Content>
+    <Content Include="src\modules\common\default\nls\resources.min.js">
+      <DependentUpon>resources.ts</DependentUpon>
+    </Content>
+    <Content Include="src\modules\common\default\view.html" />
+    <Content Include="src\modules\common\default\viewmodel.js">
+      <DependentUpon>viewmodel.ts</DependentUpon>
+    </Content>
+    <Content Include="src\modules\common\default\viewmodel.min.js">
+      <DependentUpon>viewmodel.ts</DependentUpon>
+    </Content>
     <Content Include="src\modules\common\login\component.js">
       <DependentUpon>component.ts</DependentUpon>
     </Content>
